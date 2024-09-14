@@ -9,8 +9,11 @@ import org.openqa.selenium.support.ui.Select;
 public class HomePage {
     WebDriver driver;
 
-    @FindBy(className="product_sort_container")
+    @FindBy(className = "product_sort_container")
     WebElement filterDropDown;
+
+    @FindBy(className = "shopping_cart_link")
+    WebElement shoppingCartLink;
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -21,5 +24,10 @@ public class HomePage {
     {
         Select selector = new Select(filterDropDown);
         selector.selectByVisibleText(filterOption);
+    }
+
+    public void clickCartLink()
+    {
+        shoppingCartLink.click();
     }
 }

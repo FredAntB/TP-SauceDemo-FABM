@@ -67,4 +67,9 @@ public class HomePageSteps {
 
         Assertions.assertTrue(isSorted);
     }
+
+    @Given("I click on the cart icon")
+    public void clickCartIcon() {
+        homepage.clickCartLink();
+    }
 }

@@ -1,13 +1,10 @@
 package StepDefinitions;
 
-import Pages.LoginPage;
 import Utilities.DriverManager;
-import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
 
 public class Hooks {
-    LoginPage loginPage;
 
     @Before
     public void beforeScenario()
