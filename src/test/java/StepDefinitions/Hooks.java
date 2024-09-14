@@ -14,15 +14,5 @@ public class Hooks {
     {
         DriverManager.getDriver().driver.get("https://www.saucedemo.com/");
         DriverManager.getDriver().driver.manage().window().maximize();
-
-        loginPage = new LoginPage(DriverManager.getDriver().driver);
-        loginPage.setUserName("standard_user");
-        loginPage.setPassword("secret_sauce");
-        loginPage.clickLoginButton();
-    }
-
-    @After
-    public  void afterScenario(){
-        DriverManager.getDriver().driver.quit();
     }
 }
