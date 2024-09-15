@@ -21,4 +21,9 @@ public class DriverManager {
         }
         return  instance;
     }
+
+    public static void restartDriver()
+    {
+        instance = null;
+    }
 }
